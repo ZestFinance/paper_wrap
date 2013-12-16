@@ -1,0 +1,48 @@
+[
+  {
+    "name":"Saved-Search-1",
+    "id":1,
+    "query":"access denied*",
+    "group": { 
+      "name":"production",
+      "id":31,
+      "_links": {
+        "self": {
+          "href":"https://papertrailapp.com/api/v1/groups/31.json"
+        }
+      }
+    },
+    "_links": {
+      "self": {
+        "href":"https://papertrailapp.com/searches/1.json"},
+      "search": {
+        "href":"https://papertrailapp.com/api/v1/events/search.json?q=%22access+denied%22+OR+ssh"},
+      "html": {
+        "href":"https://papertrailapp.com/searches/1/edit"
+      }
+    }
+  },
+  {
+    "name":"Saved-Search-2",
+    "id":2,
+    "query":"ssh*",
+    "group": { 
+      "name":"staging",
+      "id":32,
+      "_links": {
+        "self": {
+          "href":"https://papertrailapp.com/api/v1/groups/31.json"
+        }
+      }
+    },
+    "_links": {
+      "self": {
+        "href":"https://papertrailapp.com/searches/1.json"},
+      "search": {
+        "href":"https://papertrailapp.com/api/v1/events/search.json?q=%22access+denied%22+OR+ssh"},
+      "html": {
+        "href":"https://papertrailapp.com/searches/1/edit"
+      }
+    }
+  }
+]

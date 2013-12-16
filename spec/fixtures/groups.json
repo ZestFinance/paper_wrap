@@ -1,0 +1,38 @@
+[ 
+  { 
+    "name":"Group-A",
+    "id":31,
+    "system_wildcard":"A*",
+    "systems":[
+     ],
+    "_links": { 
+      "self": {
+        "href":"https://papertrailapp.com/api/v1/groups/31.json"
+      },
+      "search": {
+        "href":"https://papertrailapp.com/api/v1/events/search.json?group_id=31"
+      },
+      "html": {
+        "href":"https://papertrailapp.com/groups/31" 
+      }
+    }
+  },
+  {
+    "name":"Group-B",
+    "id":32,
+    "system_wildcard":"B*",
+    "systems":[
+     ],
+    "_links": { 
+      "self": {
+        "href":"https://papertrailapp.com/api/v1/groups/31.json"
+      },
+      "search": {
+        "href":"https://papertrailapp.com/api/v1/events/search.json?group_id=31"
+      },
+      "html": {
+        "href":"https://papertrailapp.com/groups/31" 
+      }
+    }
+  }
+]
