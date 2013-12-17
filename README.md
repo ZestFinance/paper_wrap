@@ -1,6 +1,6 @@
 # Paper Wrap
 
-![paper_wrap Logo](https://raw.github.com/zestfinance/paper_wrap/logo.jpg)
+![paper_wrap Logo](https://raw.github.com/zestfinance/paper_wrap/master/logo.jpg)
 
 Paper Wrap is a ruby wrapper around the [papertrail](http://papertrailapp.com) http/json API.  PaperWrap provides a clean programmatic layer to allow developers to write functionality in a simple manner on top of the Papertrail API.  PaperWrap is easy-to-use and intuitive, and operates very much like ActiveRecord.
 
