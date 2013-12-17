@@ -1,4 +1,4 @@
-# Paper Wrap [![Code Climate](https://codeclimate.com/github/ZestFinance/paper_wrap.png)](https://codeclimate.com/github/ZestFinance/paper_wrap)
+# Paper Wrap [![Build Status](https://travis-ci.org/ZestFinance/paper_wrap.png?branch=master)](https://travis-ci.org/ZestFinance/paper_wrap) [![Code Climate](https://codeclimate.com/github/ZestFinance/paper_wrap.png)](https://codeclimate.com/github/ZestFinance/paper_wrap)
 
 ![paper_wrap Logo](https://raw.github.com/zestfinance/paper_wrap/master/logo.jpg)
 
