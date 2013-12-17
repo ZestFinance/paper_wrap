@@ -38,7 +38,6 @@ To initialize the API wrapper, create a PaperWrap::Settings object and set that 
 
 ### Working with Papertrail Groups
 
-Papertrail groups form the 
 
 ```ruby
 
