@@ -17,7 +17,7 @@ Papertrail's extensive documentation on their http/json API can be found [here](
 
 Add this line to your application's Gemfile
 
-     gem 'paper_wrap', :git => 'https://github.com/zestfinance/paper_wrap'
+     gem 'paper_wrap', :git => 'https://github.com/ZestFinance/paper_wrap.git'
 
 Then run:
 
