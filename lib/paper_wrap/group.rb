@@ -15,15 +15,15 @@ module PaperWrap
       end
 
       def all
-        response = make_request('groups.json', 'get')
-        raw_list = JSON.parse(response)
+        raw_list = make_request('groups.json', 'get')
         raw_list.map { |payload| Group.new(payload) }
       end
 
       ## Creates a new group in papertrail
       def create(params = {})
         raise Exception.new("Missing required parameters: name, system_wildcard") if params[:name].nil? || params[:system_wildcard].nil?
-        make_request('groups.json', 'post', {"group[name]" => params[:name], "group[system_wildcard]" => params[:system_wildcard]})
+        raw_result = make_request('groups.json', 'post', {"group[name]" => params[:name], "group[system_wildcard]" => params[:system_wildcard]})
+        Group.new(raw_result)
       end
 
     end

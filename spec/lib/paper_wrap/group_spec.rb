@@ -8,12 +8,13 @@ describe PaperWrap::Group do
   end
 
   before do
-    described_class.stub(:make_request).and_return(group_json_raw)
+    described_class.stub(:make_request).and_return(JSON.parse(group_json_raw))
   end
+
 
   describe '.all' do
     it 'should receive the entire request and parse json' do
-      described_class.should_receive(:make_request).with('groups.json', 'get').and_return(group_json_raw)
+      described_class.should_receive(:make_request).with('groups.json', 'get').and_return(JSON.parse(group_json_raw))
       groups = described_class.all
       groups.length.should == 2
       groups[0].name.should == 'Group-A'
@@ -34,7 +35,8 @@ describe PaperWrap::Group do
     let(:environment) { 'prod' }
     it 'should dispatch a group creation request to papertrail' do
       described_class.should_receive(:make_request).with('groups.json', 'post', anything())
-      described_class.create(name: 'mygroup', system_wildcard: 'my*')
+      group = described_class.create(name: 'mygroup', system_wildcard: 'my*')
+      group.should be_kind_of(described_class)
     end
     it 'should throw an exception if required params are not passed' do
       expect { described_class.create(name: 'mygroup') }.to raise_error

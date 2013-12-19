@@ -5,8 +5,7 @@ module PaperWrap
     class << self
 
       def all
-        response = make_request('searches.json', 'get')
-        raw_list = JSON.parse(response)
+        raw_list = make_request('searches.json', 'get')
         raw_list.map { |payload| Search.new(payload) }
       end
 
@@ -32,11 +31,12 @@ module PaperWrap
         if params[:name].nil? || params[:query].nil?
           raise Exception.new("Missing required parameters: name, query")
         end
-        make_request('searches.json',
-                     'post',
-                     {'search[name]' => params[:name],
-                      'search[query]' => params[:query],
-                      'search[group_id]' => params[:group_id]})
+        result = make_request('searches.json',
+                               'post',
+                               {'search[name]' => params[:name],
+                                'search[query]' => params[:query],
+                                'search[group_id]' => params[:group_id]})
+        Search.new(result)
       end
     end
 

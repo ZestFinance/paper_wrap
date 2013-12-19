@@ -3,7 +3,7 @@ require 'spec_helper'
 describe PaperWrap::Search do
 
   let(:search_json_raw) { File.read('spec/fixtures/searches.json') }
-  before { described_class.stub(:make_request).and_return(search_json_raw) }
+  before { described_class.stub(:make_request).and_return(JSON.parse(search_json_raw)) }
 
   describe '.all' do
     it 'parses and returns all saved searches' do
@@ -52,7 +52,8 @@ describe PaperWrap::Search do
   describe '.create' do
     it 'dispatches to the api to create a saved search' do
       described_class.should_receive(:make_request).with('searches.json', 'post', anything())
-      described_class.create(name: 'mytest', query: 'myquery')
+      search = described_class.create(name: 'mytest', query: 'myquery')
+      search.should be_kind_of(described_class)
     end
   end
 

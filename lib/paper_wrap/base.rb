@@ -36,7 +36,7 @@ module PaperWrap
           raise Exception.new("Request failed (error code = #{response.code}): #{response.message}")
         end
 
-        response.body
+        JSON.parse(response.body)
       end
     end
 
